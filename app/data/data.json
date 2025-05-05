@@ -1,0 +1,267 @@
+{
+    "utilisateurs": [
+        {
+            "id": 1,
+            "nom": "admin",
+            "login": "admin@sonatel.sn",
+            "password": "ndeyendeye",
+            "profil": "Admin"
+        },
+        {
+            "id": 2,
+            "nom": "vigile",
+            "login": "vigile@sonatel.sn",
+            "password": "vigile123",
+            "profil": "Vigile"
+        },
+        {
+            "id": 8,
+            "matricule": "APP-008",
+            "prenom": "ndeye",
+            "nom": "fef",
+            "date_naissance": "2025-05-18",
+            "lieu_naissance": "zg",
+            "adresse": "ggg",
+            "email": "nndeyendiaye85@gmail.com",
+            "login": "nndeyendiaye85@gmail.com",
+            "telephone": "99999",
+            "referentiel": "kkkq",
+            "photo": "\/uploads\/photo_681840a382cf8.png",
+            "statut": "Actif",
+            "tuteur_nom": "g",
+            "lien_parente": "rqe",
+            "tuteur_adresse": "ddd",
+            "tuteur_telephone": "e",
+            "password": "$2y$10$r0HwUSc3uQPeVbP6xKQgy.hMqOmTF\/V6qF9ghhWRYTev9GWPz4436",
+            "profil": "Apprenant"
+        },
+        {
+            "id": 6,
+            "matricule": "APP-006",
+            "prenom": "ljqdfL",
+            "nom": "gg",
+            "date_naissance": "2025-04-02",
+            "lieu_naissance": "ff",
+            "adresse": "ff",
+            "email": "ff@gmail.com",
+            "telephone": "dd",
+            "referentiel": "kkkq",
+            "photo": "\/uploads\/photo_6810039689061.png",
+            "statut": "Actif",
+            "tuteur_nom": "ff",
+            "lien_parente": "dd",
+            "tuteur_adresse": "dd",
+            "tuteur_telephone": "dd",
+            "password": "$2y$10$r6wMbRPh5AIatzZT6iWKveIDIC7Cp\/9sODYj6g3oRBOrYlNccSz62",
+            "login": "ff@gmail.com",
+            "profil": "Apprenant"
+        },
+        {
+            "id": 7,
+            "matricule": "APP-007",
+            "prenom": "ljqdfL",
+            "nom": "gg",
+            "date_naissance": "2025-04-02",
+            "lieu_naissance": "ff",
+            "adresse": "ff",
+            "email": "ff@gmail.com",
+            "telephone": "dd",
+            "referentiel": "kkkq",
+            "photo": "\/uploads\/photo_6810039689061.png",
+            "statut": "Actif",
+            "tuteur_nom": "ff",
+            "lien_parente": "dd",
+            "tuteur_adresse": "dd",
+            "tuteur_telephone": "dd",
+            "password": "$2y$10$r6wMbRPh5AIatzZT6iWKveIDIC7Cp\/9sODYj6g3oRBOrYlNccSz62",
+            "login": "ff@gmail.com",
+            "profil": "Apprenant"
+        }
+    ],
+    "referenciel": [
+        {
+            "id": 3,
+            "nom": "seck",
+            "capacite": 34,
+            "photo": "assets\/images\/promo\/bbd1.jpg",
+            "modules": 0,
+            "apprenants": 0
+        },
+        {
+            "id": 1745292766,
+            "nom": "kkkq",
+            "capacite": 27,
+            "photo": "assets\/images\/promo\/Capture d’écran du 2025-03-10 10-20-18.png",
+            "modules": 0,
+            "apprenants": 0
+        },
+        {
+            "id": 1745296598,
+            "nom": "developpement web",
+            "capacite": 60,
+            "photo": "assets\/images\/promo\/53191ce19653afd33fc73f542b6136b3.jpg",
+            "modules": 0,
+            "apprenants": 0
+        },
+        {
+            "id": 1745297431,
+            "nom": "referent digital",
+            "capacite": 2,
+            "photo": "assets\/images\/promo\/ch.jpeg",
+            "modules": 0,
+            "apprenants": 0
+        },
+        {
+            "id": "17459781335762",
+            "nom": "aws",
+            "capacite": 3,
+            "photo": "assets\/images\/promo\/default.jpg",
+            "modules": 0,
+            "apprenants": 0
+        },
+        {
+            "id": "17461533566960",
+            "nom": "hacking",
+            "capacite": 20,
+            "photo": "assets\/images\/promo\/ref_68142f8c21d27.png",
+            "modules": 0,
+            "apprenants": 0
+        },
+        {
+            "id": "17461570024300",
+            "nom": "ndiaye",
+            "capacite": 2,
+            "photo": "assets\/images\/promo\/default.jpg",
+            "modules": 0,
+            "apprenants": 0
+        }
+    ],
+    "promotions": [
+        {
+            "id": 1,
+            "nom": "PROMO DEV 2023",
+            "dateDebut": "2023-01-15",
+            "dateFin": "2023-07-15",
+            "referenciels": [
+                3,
+                1745292766,
+                1745296598,
+                1745297431
+            ],
+            "photo": "assets\/images\/promo\/promo_dev_2023.jpeg",
+            "statut": "Inactive",
+            "nbrApprenant": 0,
+            "etat": "terminee"
+        },
+        {
+            "id": 2,
+            "nom": "PROMO DEV 2024",
+            "dateDebut": "2025-01-15",
+            "dateFin": "2026-01-12",
+            "referenciels": [
+                3,
+                1745292766
+            ],
+            "photo": "assets\/images\/promo\/promo_dev_2024.jpeg",
+            "statut": "Active",
+            "nbrApprenant": 19,
+            "etat": "en cours"
+        },
+        {
+            "id": 3,
+            "nom": "promo8",
+            "dateDebut": "11-01-2025",
+            "dateFin": "11-02-2025",
+            "photo": "assets\/images\/promo\/Capture d’écran du 2025-04-13 13-33-39.png",
+            "statut": "Inactive",
+            "nbrApprenant": 0,
+            "referenciels": [
+                3,
+                1745292766
+            ],
+            "etat": "terminee"
+        },
+        {
+            "id": 4,
+            "nom": "promo9",
+            "dateDebut": "11-01-2025",
+            "dateFin": "11-02-2025",
+            "photo": "assets\/images\/promo\/default.jpg",
+            "statut": "Inactive",
+            "nbrApprenant": 0,
+            "referenciels": [
+                3,
+                1745292766
+            ],
+            "etat": "terminee"
+        },
+        {
+            "id": 5,
+            "nom": "test",
+            "dateDebut": "2026-10-02",
+            "dateFin": "2026-10-03",
+            "referenciels": [
+                1745297431
+            ],
+            "photo": "\/assets\/images\/promotions\/680ad7554ac41_Capture d’écran du 2025-03-27 21-13-31.png",
+            "statut": "Inactive",
+            "nbrApprenant": 0,
+            "etat": "terminee"
+        },
+        {
+            "id": 6,
+            "nom": "test1",
+            "dateDebut": "2026-10-02",
+            "dateFin": "2026-10-03",
+            "referenciels": [
+                1745292766,
+                1745296598,
+                1745297431
+            ],
+            "photo": "\/assets\/images\/promotions\/680ad7e91b477_Capture d’écran du 2025-03-25 01-56-12.png",
+            "statut": "Inactive",
+            "nbrApprenant": 0,
+            "etat": "terminee"
+        },
+        {
+            "id": 7,
+            "nom": "promo955",
+            "dateDebut": "2026-10-02",
+            "dateFin": "2026-10-03",
+            "referenciels": [
+                1745292766
+            ],
+            "photo": "\/assets\/images\/promotions\/680b23bbb2660_Capture d’écran du 2025-04-17 13-34-40.png",
+            "statut": "Inactive",
+            "nbrApprenant": 0,
+            "etat": "terminee"
+        },
+        {
+            "id": 8,
+            "nom": "promotion7",
+            "dateDebut": "2025-01-12",
+            "dateFin": "2024-01-12",
+            "referenciels": [
+                3
+            ],
+            "photo": "\/assets\/images\/promotions\/6811774a84fe6_Capture d’écran du 2025-04-29 08-53-16.png",
+            "statut": "Inactive",
+            "nbrApprenant": 0,
+            "etat": "terminee"
+        },
+        {
+            "id": 9,
+            "nom": "promo910",
+            "dateDebut": "2024-01-13",
+            "dateFin": "2024-01-15",
+            "referenciels": [
+                17459781335762
+            ],
+            "photo": "\/assets\/images\/promotions\/68142bb206401_Capture d’écran du 2025-03-10 10-20-18.png",
+            "statut": "Inactive",
+            "nbrApprenant": 0,
+            "etat": "terminee"
+        }
+    ],
+    "apprenants": []
+}

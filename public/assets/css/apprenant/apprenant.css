@@ -1,0 +1,638 @@
+/* ==================== VARIABLES ==================== */
+:root {
+    --color-bg: #f7f8fa;
+    --color-text: #333;
+    --color-white: #fff;
+    --color-border: #b9b5b5;
+    --color-hover-bg: #fff6ed;
+    --color-hover-border: #ff7900;
+    --color-p25-bg: #fff1e6;
+    --color-logout-bg: #fdf3f2;
+    --color-logout-hover: #fcf2f1;
+    --color-logout-text: rgba(130, 68, 79, 1);
+    --color-gray-light: #f5f2f2;
+    --color-orange: #ff7a00;
+}
+
+/* ==================== RESET ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==================== CONTAINER ==================== */
+.container {
+    display: flex;
+}
+
+/* ==================== SIDEBAR ==================== */
+.sidebar {
+    width: 15%;
+    background-color: var(--color-white);
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.sidebar .orange {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+    height: 17%;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.sidebar .orange .logo {
+    width: 70%;
+    height: 40%;
+    margin-bottom: 10px;
+}
+
+.sidebar .orange .logo .img {
+    width: 100%;
+    height: 100%;
+    background: url("/assets/images/login/logo_odc.png") no-repeat center center / cover;
+}
+
+.sidebar .orange .p25 {
+    width: 70%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: var(--color-p25-bg);
+    font-size: 0.9rem;
+    padding: 5px 0;
+}
+
+.sidebar nav {
+    width: 100%;
+    height: 75%;
+    border-bottom: 1px solid var(--color-border);
+    padding: 10px 0;
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(87, 77, 77);
+    border-radius: 8px;
+    height: 45px;
+    padding-left: 7%;
+    margin: 5px 10px;
+    transition: all 0.2s ease;
+}
+
+.sidebar nav a:hover {
+    background: var(--color-hover-bg);
+    border-left: 8px solid var(--color-hover-border);
+}
+
+.sidebar nav i {
+    font-size: 1.1rem;
+    width: 24px;
+    text-align: center;
+}
+
+.sidebar .foot {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.sidebar .log-out {
+    width: 90%;
+    height: 60%;
+    border-radius: 8px;
+    background-color: var(--color-logout-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s ease;
+}
+
+.sidebar .log-out a {
+    width: 100%;
+    height: 100%;
+    color: var(--color-logout-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar .log-out:hover {
+    background: var(--color-logout-hover);
+}
+
+/* ==================== MAIN ==================== */
+.main {
+    width: 84.9%;
+    position: fixed;
+    right: 0%;
+    top: 0;
+    height: auto;
+    background-color: var(--color-white);
+    z-index: 900;
+}
+
+/* ==================== HEADER ==================== */
+.topbar {
+    background-color: var(--color-white);
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 6px rgba(82, 81, 81, 0.05);
+}
+
+.search-box input {
+    padding: 10px 15px;
+    width: 350px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    background-color: var(--color-gray-light);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.95rem;
+}
+
+.user-info .notif {
+    font-size: 1.2rem;
+    margin-right: 5px;
+    color: #666;
+}
+
+.avatar i {
+    font-size: 1.8rem;
+    color: #666;
+}
+
+/* ==================== CONTENU ==================== */
+.content {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 92%;
+    padding: 20px;
+    margin-top: 10px;
+    min-height: calc(100vh - 60px);
+}
+
+/* ==================== TABLE STYLES ==================== */
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.title h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Topbar pour les tableaux */
+.list-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.list-search input {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.list-filters select {
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.list-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.export {
+    position: relative;
+}
+
+.export-btn {
+    background: #000;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.export-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-top: 5px;
+    right: 0;
+    border-radius: 8px;
+    z-index: 100;
+}
+
+.export:hover .export-menu {
+    display: block;
+}
+
+.export-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 0.9rem;
+}
+
+.add-btn {
+    background: var(--color-orange);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    font-weight: 600;
+    color: #555;
+}
+
+tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.badge.ref {
+    background: #4CAF50;
+}
+
+.badge.statut.actif {
+    background: #4CAF50;
+}
+
+.badge.statut.remplace {
+    background: #E74C3C;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination button {
+    background: var(--color-orange);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ==================== BURGER BUTTON ==================== */
+.toggle-btn {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    z-index: 1500;
+    color: var(--color-hover-border);
+    cursor: pointer;
+}
+
+/* ==================== MENU CLOSER ==================== */
+.menu-closer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    display: none;
+    z-index: 2;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 25%;
+    }
+    
+    .main {
+        width: 75%;
+    }
+    
+    .content {
+        width: 75%;
+    }
+    
+    .search-box input {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        left: -100%;
+        width: 60%;
+        z-index: 1500;
+    }
+
+    #menu-toggle:checked ~ .container .sidebar {
+        left: 0;
+    }
+
+    .main {
+        width: 100%;
+        left: 0;
+    }
+    
+    .content {
+        width: 100%;
+        right: 0;
+        padding: 15px;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+
+    .search-box input {
+        width: 200px;
+    }
+    
+    .list-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .list-filters {
+        display: flex;
+        width: 100%;
+    }
+    
+    .list-filters select {
+        flex: 1;
+        margin: 0 5px;
+    }
+    
+    .list-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    /* Afficher les menu-closer seulement quand le menu est ouvert */
+    #menu-toggle:checked ~ .container .menu-closer {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 80%;
+    }
+
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .search-box {
+        width: 100%;
+    }
+    
+    .search-box input {
+        width: 100%;
+    }
+    
+    .user-info {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .list-search input {
+        width: 100%;
+    }
+    
+    .list-filters {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .list-filters select {
+        margin: 5px 0;
+    }
+    
+    .table-container {
+        padding: 10px;
+    }
+    
+    .content {
+        padding: 10px;
+        top: 120px;
+    }
+}
+
+/* Styles pour la pagination */
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 5px;
+}
+
+.pagination-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pagination-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.pagination-btn.active {
+    background-color: #0066cc;
+    color: white;
+    border-color: #0066cc;
+}
+
+.pagination-btn.disabled {
+    color: #aaa;
+    pointer-events: none;
+    background-color: #f5f5f5;
+}
+
+.pagination-ellipsis {
+    padding: 8px 12px;
+    color: #333;
+}
+
+.pagination-info {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.filters-form{
+     
+    display: flex;border: 1px solid #ccc;
+}
+
+.filters-form .filters{
+    padding: 10px;
+    border-radius: 4px;
+    color: #333;
+    text-decoration: none;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 10px;
+}
+.filters-form .filter-btn{
+    background-color: #fff;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 10px;
+}
+
+/* Styles pour le menu d'exportation */
+.export {
+    position: relative;
+    display: inline-block;
+}
+
+.export-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.export-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+}
+
+.export-menu.active {
+    display: block;
+}
+
+.export-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.export-menu a:hover {
+    background-color: #f1f1f1;
+}
